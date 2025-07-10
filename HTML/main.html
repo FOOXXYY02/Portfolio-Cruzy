@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Mon Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="../HTML/main.html">Accueil</a></li>
+      <li><a href="../HTML/galerie.html">Galerie</a></li>
+      <li><a href="../HTML/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="floating-camera">
+      <img src="../image/sony_alpha_7iii.png" alt="Appareil Photo Sony Alpha 7III" />
+    </div>
+  </header>
+
+  <main>
+
+    <section id="gallery" class="gallery">
+      <div class="photo-block left">
+        <img src="../image/photo1.PNG" alt="Photo 1" />
+        <div class="photo-text">
+          <h3>Photo 1</h3>
+          <p>Description de la première photo ici.</p>
+        </div>
+      </div>
+
+      <div class="photo-block right">
+        <img src="../image/photo2.JPG" alt="Photo 2" />
+        <div class="photo-text">
+          <h3>Photo 2</h3>
+          <p>Description de la deuxième photo ici.</p>
+        </div>
+      </div>
+
+      <div class="photo-block left">
+        <img src="../image/photo3.JPG" alt="Photo 3" />
+        <div class="photo-text">
+          <h3>Photo 3</h3>
+          <p>Description de la troisième photo ici.</p>
+        </div>
+      </div>
+
+      <!-- Ajoute d'autres photos ici selon besoin -->
+
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contactez-moi</h2>
+      <form>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="../JS/script.js"></script>
+  <script>
+    const floatingCamera = document.querySelector('.floating-camera');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        floatingCamera.classList.add('hide');
+      } else {
+        floatingCamera.classList.remove('hide');
+      }
+    });
+  </script>
+  
+</body>
+</html>

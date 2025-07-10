@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../CSS/contact.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="../HTML/main.html">Accueil</a></li>
+      <li><a href="../HTML/galerie.html">Galerie</a></li>
+      <li><a href="../HTML/contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-container">
+    <h1>Contactez-moi</h1>
+    <form>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="instagram-section">
+      <h3>Retrouvez-moi aussi sur Instagram</h3>
+      <p>Découvrez mes dernières photos, making-of, et plus encore !</p>
+      <a href="https://www.instagram.com/cruzy.vision/" target="_blank">Voir sur Instagram</a>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('open');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
