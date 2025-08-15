@@ -1,42 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galerie</title>
+  <title>Galerie avec Thèmes</title>
   <link rel="stylesheet" href="../CSS/galerie.css" />
 </head>
 <body>
   <nav>
-    <div class="logo">Portfolio</div>
+    <div class="logo">Cruzy</div>
     <div class="menu-toggle" id="menu-toggle">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <ul id="menu">
+    <ul id="nav-links">
       <li><a href="../HTML/main.html">Accueil</a></li>
       <li><a href="../HTML/galerie.html">Galerie</a></li>
       <li><a href="../HTML/contact.html">Contact</a></li>
+      <li><a href="../HTML/tarif.html">Tarifs</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section class="slider-gallery">
-      <div class="gallery-item"><img src="../image/photo1.PNG" alt="Photo 1"></div>
-      <div class="gallery-item"><img src="../image/photo2.JPG" alt="Photo 2"></div>
-      <div class="gallery-item"><img src="../image/photo3.JPG" alt="Photo 3"></div>
-      <div class="gallery-item"><img src="../image/photo4.JPG" alt="Photo 4"></div>
-      <div class="gallery-item"><img src="../image/photo5.JPG" alt="Photo 5"></div>
-    </section>
+  <main class="theme-gallery">
+    <div class="slider">
+      <div class="slider-item" data-theme="portrait">
+        <img src="../image/portrait1.jpeg" alt="Portrait" />
+        <p>Portrait</p>
+      </div>
+      <div class="slider-item" data-theme="voiture">
+        <img src="../image/voiture4.jpg" alt="Voiture" />
+        <p>Voiture</p>
+      </div>
+      <div class="slider-item" data-theme="paysage">
+        <img src="../image/coming.png" alt="Paysage" />
+        <p>Loisir</p>
+      </div>
+    </div>
+
+    <div class="sub-gallery" id="sub-gallery"></div>
   </main>
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      menu.classList.toggle('active');
-    });
-  </script>
+  <script src="../JS/galerie.js"></script>
 </body>
 </html>

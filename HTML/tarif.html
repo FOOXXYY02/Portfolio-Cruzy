@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs</title>
+  <link rel="stylesheet" href="../CSS/tarif.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Cruzy</div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="nav-links">
+          <li><a href="../HTML/main.html">Accueil</a></li>
+          <li><a href="../HTML/galerie.html">Galerie</a></li>
+          <li><a href="../HTML/contact.html">Contact</a></li>
+          <li><a href="../HTML/tarif.html">Tarifs</a></li>
+        </ul>
+      </nav>
+
+  <main class="tarifs-section">
+    <h1>Mess Tarifs</h1>
+    <div class="tarif-cards">
+      <div class="card">
+        <h2>Shooting photo — 15€</h2>
+        <p>Nombre illimité de photos<br>5 photos retouchées</p>
+      </div>
+      <div class="card">
+        <h2>Shooting photo — 20€</h2>
+        <p>Nombre illimité de photos<br>10 photos retouchées</p>
+      </div>
+      <div class="card">
+        <h2>Shooting avec thème — 30€</h2>
+        <p>Nombre illimité de photos<br>10 photos retouchées</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

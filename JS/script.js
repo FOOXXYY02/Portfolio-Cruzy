@@ -21,5 +21,7 @@ function checkVisibility() {
   });
 }
 
+
+
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
