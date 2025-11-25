@@ -340,3 +340,11 @@ body.scrolled .floating-camera {
 .button-link:hover {
   background-color: #ffc500;
 }
+
+/* <-- slider main téléphone */
+@media (min-width: 768px) {
+  .tarif-slider {
+    justify-content: center;
+    overflow-x: visible;
+  }
+}
